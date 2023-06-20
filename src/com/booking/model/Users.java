@@ -10,10 +10,28 @@ public class Users {
     private long userId;
     private String userEmail;
     private long userPhone;
-    private List<City> customerCity;
+    private List<City> ustomerCity;
+
     private Date registrationDate;
     private boolean clientStatus;
 
+    //Constructors
+    public Users(String firstName, String lastName, long userId, String userEmail, long userPhone, List<City> ustomerCity, Date registrationDate, boolean clientStatus) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userId = userId;
+        this.userEmail = userEmail;
+        this.userPhone = userPhone;
+        this.ustomerCity = ustomerCity;
+        this.registrationDate = registrationDate;
+        this.clientStatus = clientStatus;
+    }
+    //Constructors
+    public Users(){
+
+    }
+
+    //Getters and setters
     public void setFirstName(String firstName){
         this.firstName = firstName;
     }
@@ -53,13 +71,6 @@ public class Users {
         this.userPhone = userPhone;
     }
 
-    public List<City> getCustomerCity() {
-        return customerCity;
-    }
-
-    public void setCustomerCity(List<City> customerCity) {
-        this.customerCity = customerCity;
-    }
 
     public Date getRegistrationDate() {
         return registrationDate;
@@ -77,6 +88,14 @@ public class Users {
         this.clientStatus = clientStatus;
     }
 
+    public List<City> getUstomerCity() {
+        return ustomerCity;
+    }
+
+    public void setUstomerCity(List<City> ustomerCity) {
+        this.ustomerCity = ustomerCity;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
@@ -85,7 +104,7 @@ public class Users {
                 ", userId=" + userId +
                 ", userEmail='" + userEmail + '\'' +
                 ", userPhone=" + userPhone +
-                ", customerCity=" + customerCity +
+                ", ustomerCity=" + ustomerCity +
                 ", registrationDate=" + registrationDate +
                 ", clientStatus=" + clientStatus +
                 '}';

@@ -43,4 +43,13 @@ public class City {
     public void setRegion(String region) {
         this.region = region;
     }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "cityName='" + cityName + '\'' +
+                ", postCode=" + postCode +
+                ", region='" + region + '\'' +
+                '}';
+    }
 }
