@@ -11,7 +11,6 @@ public class Users {
     private String userEmail;
     private long userPhone;
     private List<City> ustomerCity;
-
     private Date registrationDate;
     private boolean clientStatus;
 
@@ -73,7 +72,7 @@ public class Users {
 
 
     public Date getRegistrationDate() {
-        return registrationDate;
+        return this.registrationDate;
     }
 
     public void setRegistrationDate(Date registrationDate) {
