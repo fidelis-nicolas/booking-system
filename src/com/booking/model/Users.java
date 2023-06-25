@@ -3,7 +3,7 @@ package com.booking.model;
 import java.util.Date;
 import java.util.List;
 
-public class Users {
+public class Users{
 
     private String firstName;
     private  String lastName;
@@ -15,18 +15,10 @@ public class Users {
     private boolean clientStatus;
 
     //Constructors
-    public Users(String firstName, String lastName, long userId, String userEmail, long userPhone, List<City> ustomerCity, Date registrationDate, boolean clientStatus) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userId = userId;
-        this.userEmail = userEmail;
-        this.userPhone = userPhone;
-        this.ustomerCity = ustomerCity;
-        this.registrationDate = registrationDate;
-        this.clientStatus = clientStatus;
-    }
+
     //Constructors
-    public Users(){
+    public Users(Date date){
+        this.registrationDate = date;
 
     }
 
