@@ -1,7 +1,7 @@
 package com.booking.view;
 
 public class Utils{
-    public static final String teamsFormat = "| %-20s | %-19d | %-21.2f | %-12.2f |%n";
+    public static final String teamsFormat = "| %-20s | %-19s | %-21.2s | %-12.2s |%n";
     public static final String PlayerFormat = "| %-20s | %-14.2f | %-12s | %-5d | %-5d |%n";
     public static final String DisplayPlayerFromAllTeamsFormat = "| %-20s | %-14.2f | %-12s | %-5d | %-5d | %-9s |%n";
     public static final String GamesFormat="| %-17s | %-4s | %-17s |%n";
@@ -25,9 +25,9 @@ public class Utils{
     {
         System.out.format("+-------------------+------+-------------------+%n");
     }
-    public static void teamsHeader( ){
+    public static void customerDetailsHeader( ){
         System.out.format("+----------------------+---------------------+-----------------------+--------------+%n");
-        System.out.format("| Team Name            | Number of Players   | Average Player Credit | Average Age  |%n");
+        System.out.format("| Customer            | City                 | Phone                 | email  |%n");
         System.out.format("+----------------------+---------------------+-----------------------+--------------+%n");
     }
     public static void teamTableEnd(){

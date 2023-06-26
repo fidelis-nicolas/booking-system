@@ -8,9 +8,9 @@ public class Controller {
     AdminRepo adminRepo;
 
 
-    public Controller(UserRepo repo, AdminRepo adminRepo){
+    public Controller(UserRepo repo){
         this.repo = repo;
-        this.adminRepo = adminRepo;
+//        this.adminRepo = adminRepo;
 
     }
     public void registration(){
