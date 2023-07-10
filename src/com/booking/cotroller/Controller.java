@@ -4,20 +4,20 @@ import com.booking.repo.AdminRepo;
 import com.booking.repo.UserRepo;
 
 public class Controller {
-    UserRepo repo;
+    UserRepo userRepo;
     AdminRepo adminRepo;
 
 
-    public Controller(UserRepo repo){
-        this.repo = repo;
+    public Controller(UserRepo userRepo){
+        this.userRepo = userRepo;
 //        this.adminRepo = adminRepo;
 
     }
     public void registration(){
-        repo.userRegistration();
+        userRepo.userRegistration();
     }
     public void viewProfile(){
-        repo.viewProfile();
+        userRepo.viewProfile();
     }
 
 

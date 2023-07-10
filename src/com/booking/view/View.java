@@ -4,8 +4,8 @@ import com.booking.cotroller.Controller;
 import com.booking.model.City;
 import com.booking.repo.UserService;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -17,7 +17,7 @@ public class View {
     private String userEmail;
     private long userPhone;
     private List<City> customerCity;
-    private Date registrationDate;
+    private LocalDate registrationDate;
     private boolean clientStatus;
 
     private String userCity;
@@ -27,13 +27,36 @@ public class View {
     public View (){
         service = new UserService(this);
         controller = new Controller(service);
-        registrationDate = new Date();
-        registrationDate.getTime();
+        registrationDate = LocalDate.now();
         this.userId = random.nextLong(1000000000000l);
         customerCity = new ArrayList<>();
         this.customerCity.add(new City(userCity));
     }
 
+    public void mainMenu(){
+        while (true){
+            System.out.println("Enter 1 to login  ");
+            System.out.println("Enter 2 to register  ");
+            System.out.println("Enter 3 to view information  ");
+            System.out.println("Prese 0 to exit");
+            int userOption = In.nextInt();
+            if(userOption == 1 ){
+                System.out.println("Login not availible yet");
+
+            }
+            else if(userOption == 2){
+                registerForm();
+            }
+            else if(userOption == 0){
+                System.out.println("thank you");
+                break;
+            } else if (userOption == 3) {
+                controller.viewProfile();
+
+
+            }
+        }
+    }
 
     public void registerForm(){
         System.out.println("Fill the forms below");
@@ -100,11 +123,11 @@ public class View {
         this.customerCity = customerCity;
     }
 
-    public Date getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 

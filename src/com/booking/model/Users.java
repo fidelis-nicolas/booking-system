@@ -1,5 +1,6 @@
 package com.booking.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -10,8 +11,8 @@ public class Users{
     private long userId;
     private String userEmail;
     private long userPhone;
-    private List<City> ustomerCity;
-    private Date registrationDate;
+    private List<City> customerCity;
+    private LocalDate registrationDate;
     private boolean clientStatus;
 
     //Constructors
@@ -20,19 +21,19 @@ public class Users{
 
     }
 
-    public Users(String firstName, String lastName, long userId, String userEmail, long userPhone, List<City> ustomerCity, Date registrationDate, boolean clientStatus) {
+    public Users(String firstName, String lastName, long userId, String userEmail, long userPhone, List<City> customerCity, LocalDate registrationDate, boolean clientStatus) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userId = userId;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
-        this.ustomerCity = ustomerCity;
+        this.customerCity = customerCity;
         this.registrationDate = registrationDate;
         this.clientStatus = clientStatus;
     }
 
     //Constructors
-    public Users(Date date){
+    public Users(LocalDate date){
         this.registrationDate = date;
 
     }
@@ -78,11 +79,11 @@ public class Users{
     }
 
 
-    public Date getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return this.registrationDate;
     }
 
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 
@@ -94,12 +95,12 @@ public class Users{
         this.clientStatus = clientStatus;
     }
 
-    public List<City> getUstomerCity() {
-        return ustomerCity;
+    public List<City> getCustomerCity() {
+        return customerCity;
     }
 
-    public void setUstomerCity(List<City> ustomerCity) {
-        this.ustomerCity = ustomerCity;
+    public void setCustomerCity(List<City> customerCity) {
+        this.customerCity = customerCity;
     }
 
     @Override
@@ -110,9 +111,16 @@ public class Users{
                 ", userId=" + userId +
                 ", userEmail='" + userEmail + '\'' +
                 ", userPhone=" + userPhone +
-                ", ustomerCity=" + ustomerCity +
+                ", ustomerCity=" + customerCity +
                 ", registrationDate=" + registrationDate +
                 ", clientStatus=" + clientStatus +
+                '}';
+    }
+
+    public String newString(){
+        return "Users{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }

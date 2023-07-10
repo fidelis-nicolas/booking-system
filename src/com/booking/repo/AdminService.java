@@ -4,7 +4,10 @@ import com.booking.model.Users;
 
 import java.util.ArrayList;
 
+
 public class AdminService implements AdminRepo, UserRepo{
+
+    Users users;
     @Override
     public void adminLogin() {
 
